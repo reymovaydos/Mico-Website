@@ -1,0 +1,61 @@
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+@mixin Display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.our-doctors {
+  position: relative;
+  padding: 50px 30px;
+  margin-top: 40px;
+  background-color: #00c6a9;
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    span {
+      color: #fff;
+    }
+  }
+  .team_carousel{
+    margin-top: 30px;
+  }
+}
+
+.alice-carousel__prev-btn-item{
+  color: #000;
+  position: absolute;
+  left: 0;
+  top: 35%;
+  font-size: 40px;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  @include Display;
+  &:hover{
+    background-color: #000;
+    color: white;
+  }
+}
+.alice-carousel__next-btn-item{
+  position: absolute;
+  right: 0;
+  top: 35%;
+  color: #000;
+  font-size: 40px;
+  @include Display;
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  &:hover{
+    background-color: #000;
+    color: #fff;
+  }
+}

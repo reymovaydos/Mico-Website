@@ -1,0 +1,122 @@
+@mixin Display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.book-appoinment {
+    padding: 20px 20px;
+    width: 95%;
+    height: 335px;
+    margin: 0 auto;
+    margin-top: 40px;
+    box-shadow: 4px 4px 10px 7px gray;
+
+    @media (max-width: 1120px) {
+        width: 97%;
+        height: 620px;
+        padding: 20px 20px;
+    }
+    
+    @media (max-width: 424px){
+        height: 640px;
+    }
+    .text {
+        h1 {
+            font-family: 300;
+    
+            span {
+                color: #00c6a9;
+            }
+        }
+        .line {
+            border: 2px solid aquamarine;
+            width: 110px;
+        }
+    }
+    form{
+        
+    .forms {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        @media (min-width: 420px) and (max-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+        @media (max-width: 1120px){
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .form label {
+            font-size: 16px;
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                font-size: 16px;
+            }
+        }
+
+        .form {
+            padding: 0 10px;
+        }
+
+        .form .text-field,
+        .select_item {
+            margin-top: 10px;
+            width: 100%;
+
+            @media (max-width: 1120px) {
+                width: 100%;
+            }
+        }
+
+        .form input,
+        select::placeholder {
+            color: black;
+        }
+    }   
+    }
+
+
+
+
+    .btn-submit-now {
+        background-color: black;
+        color: white;
+        width: 150px;
+        border-radius: 5px;
+        padding: 10px;
+
+        @media (min-width: 480px) and (max-width: 768px) {
+            @include Display;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1120px){
+            margin: 0 auto;
+        }
+        @media (min-width: 320px) and (max-width: 480px) {
+            @include Display;
+            margin: 0 auto;
+        }
+        @media (max-width: 320px){
+            @include Display;
+        }
+    }
+}
+
+//320px and 480px//
+//480px and 768px//
+//768px and 1023px

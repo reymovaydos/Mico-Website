@@ -1,0 +1,96 @@
+@mixin Display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-hospital {
+    margin-top: 50px;
+    img{
+        margin-bottom: 1rem;
+        @media (min-width: 320px) and (max-width: 480px){
+            width: 77%;
+        }
+        @media (min-width: 480px) and (max-width: 768px){
+            width: 82%;
+        }
+        @media (max-width: 320px){
+            width: 100%;
+        }
+    }
+    @include Display;
+    @media (min-width: 420px) and (max-width: 768px) {
+            flex-direction: column;
+    }
+    @media (min-width: 768px) and (max-width: 1110px) {
+        flex-direction: column;
+}
+    @media (min-width: 320px) and (max-width: 480px) {
+        flex-direction: column;
+}
+@media (max-width: 320px){
+    flex-direction: column;
+}
+    h1 {
+        margin-bottom: 20px;
+        @media (min-width: 480px) and (max-width: 768px){
+            text-align: center;
+        }
+        @media (min-width: 320px) and (max-width: 480px){
+            text-align: center;
+        }
+        @media (min-width: 768px) and (max-width: 1110px){
+            text-align: center;
+        }
+        @media (max-width: 320px){
+            text-align: center;
+        }
+        span{
+            color: #00c6a9;
+        }
+    }
+
+
+    p {
+        color: gray;
+        width: 450px;
+        margin-bottom: 20px;
+        @media (min-width: 480px) and (max-width: 768px){
+            font-size: 14px;
+            text-align: center;
+        }
+        @media (min-width: 320px) and (max-width: 480px){
+            font-size: 13px;
+            width: 240px;
+            text-align: center;
+        }
+        @media (max-width: 320px){
+            width: 90%;
+            padding-left: 40px;
+        }
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        width: 150px;
+        padding: 10px;
+        @media (min-width: 480px) and (max-width: 768px){
+            @include Display;
+            margin: 0 auto;
+        }
+        @media (min-width: 320px) and (max-width: 480px){
+            @include Display;
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) and (max-width: 1110px){
+            @include Display;
+            margin: 0 auto;
+        }
+        @media (max-width: 320px){
+            @include Display;
+            margin: 0 auto;
+        }
+    }
+}
